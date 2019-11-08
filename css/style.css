@@ -1,0 +1,396 @@
+/*
+    -Global Style
+    -Nanbar Section
+    -Header Section
+    -About Section
+    -Skills Section
+    -Work Section
+    -Contact Section
+*/
+
+/* Global Style */
+body {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+.title-section {
+  width: 80%;
+  margin: auto;
+}
+.title-section .name-section {
+  color: #f47983;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+.title-section .name-section::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 2px;
+  margin: 10px auto 0;
+  background-color: #555;
+}
+.title-section .desc-section {
+  color: #888;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+@media (max-width: 767px) {
+  .title-section .name-section {
+    font-size: 20px;
+  }
+}
+/*scroll top*/
+.scroll-top i {
+  background-color: #f47983;
+  color: #fff;
+  position: fixed;
+  z-index: 9;
+  right: 15px;
+  bottom: 20px;
+  padding: 0 8px;
+  border-radius: 20%;
+  box-shadow: 2px 2px 30px #f47983;
+  cursor: pointer;
+}
+.btn-style {
+  background-color: #f47983;
+  cursor: pointer;
+  color: #fff;
+  outline: none !important;
+  border: 1px solid #f47983;
+  padding: 10px 15px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in;
+}
+.btn-style:hover {
+  background-color: #fff;
+  color: #f47983;
+}
+/* Navbar Section */
+nav {
+  background-color: #f47983;
+}
+nav ul li {
+  padding: 5px 15px;
+}
+nav ul li .nav-link {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  nav ul li a {
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  background-color: #c3272b;
+  transition: width 0.3s ease-in;
+}
+nav ul li .nav-link:hover {
+  color: #c3272b !important;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+.sticky-nav {
+  position: fixed;
+  background-color: rgba(244, 121, 131, 0.8);
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.navbar-toggler {
+  outline: none !important;
+  cursor: pointer !important;
+}
+/* Header Section */
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../images/header/beauty-salon-3277314_960_720.jpg") no-repeat;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  height: 100vh;
+}
+header .resume {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+}
+header .resume-name,
+header .resume-jop {
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+header .resume-name span {
+  color: #f47983;
+}
+header .resume-jop {
+  font-size: 30px;
+}
+
+@media (max-width: 767px) {
+  header .resume-name,
+  header .resume-jop {
+    font-size: 20px;
+  }
+}
+header .resume-down {
+  font-size: 25px;
+  cursor: pointer;
+  position: absolute;
+  bottom: -60%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  padding: 15px;
+  border-radius: 50%;
+  transition: color 0.3s ease-in-out;
+  animation-name: up-dwon;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+header .resume-down:hover {
+  color: #f47983;
+  border: 2px dotted #f47983;
+}
+@keyframes up-dwon {
+  0% {
+    bottom: -55%;
+  }
+  50% {
+    bottom: -65%;
+  }
+  100% {
+    bottom: -60%;
+  }
+}
+@media (max-width: 767px) {
+  header .resume-down {
+    font-size: 16px;
+    bottom: -40%;
+  }
+}
+/* About Section */
+.career-about {
+  border-left: 1px solid #e2e2e2;
+  padding-left: 15px
+}
+.about .career-title,
+.about .experiencs-about-title {
+  color: #f47983;
+  text-transform: uppercase;
+}
+.about .career-desc {
+  color: #333;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+.about .experiencs-about .beauty,
+.about .experiencs-about .date {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .about .career-title,
+  .about .experiencs-about-title {
+    font-size: 20px;
+    text-align: center;
+  }
+  .about .career-desc,
+  .about .experiencs-about .beauty,
+  .about .experiencs-about .date {
+    font-size: 16px;
+    text-align: center;
+  }
+  .career-about{
+    border: none;
+  }
+}
+/* Skills Section */
+.skills {
+  background-color: #f5f5f5;
+}
+.skills .txt-skills .active::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 4px;
+  position: absolute;
+  background-color: #f47983;
+  left: 15px;
+  bottom: -8px;
+}
+.skills .txt-skills .btn-style {
+  color: #f47983;
+  background-color: #fff;
+  border: none;
+}
+.skills .txt-skills .btn-style.active {
+  position: relative;
+  color: #fff;
+  background-color: #f47983;
+}
+.skills .txt-skills ul {
+  padding: 0;
+}
+.skills .txt-skills ul li {
+  color: #888;
+  list-style: none;
+  border-bottom: 1px solid #444;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+.skills .txt-skills .hair-skills ul li {
+  margin-top: 15px;
+  font-size: 17px;
+}
+.skills .hair-skills {
+  display: none;
+}
+.skills .img-skills {
+  background: url("../images/skill/hair-4541766_960_720.jpg") no-repeat center
+    center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .skills .btn-skills {
+    display: flex;
+  }
+  .skills .txt-skills ul li {
+    text-align: center;
+  }
+  .skills .txt-skills .btn-style:nth-child(1) {
+    margin-right: 10px;
+  }
+}
+/* Work Section */
+.work .btn-work:hover {
+  background-color: #f47983;
+  color: #fff;
+}
+.work .box{
+  position: relative;
+  height: 250px;
+}
+.work .box .over-lay {
+  background-color: rgba(244, 121, 131, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  text-align: center;
+  color: #fff;
+}
+.work .box:hover .over-lay {
+  display: block;
+}
+.desc-over-lay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.work .box img {
+  width: 100%;
+  height: 100%;
+}
+.work .group-two .box {
+  display: none;
+}
+.work .btn-style {
+  width: 150px;
+  display: block;
+  margin: auto;
+}
+/* Contact Section */
+.contact {
+  background-color: #f5f5f5;
+}
+.contact .inputs-form {
+  position: relative;
+  margin: 20px 0;
+}
+.contact .inputs-form::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f47983;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease-in, left 0.3s ease-in;
+}
+.contact .inputs-form:nth-child(3)::after {
+  bottom: 6px;
+}
+.contact .inputs-form:hover.inputs-form::after,
+.contact .inputs-form:focus.inputs-form::after {
+  left: 0;
+  width: 100%;
+}
+.contact .icon-form {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  font-size: 25px;
+  color: #f47983;
+}
+.contact .input-form,
+.contact form textarea {
+  width: 100%;
+  padding: 15px 15px 15px 50px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #888;
+}
+.contact .input-form::placeholder {
+  font-size: 20px;
+}
+.contact form textarea {
+  min-height: 300px;
+  max-height: 300px;
+}
+.contact .btn-form {
+  padding: 15px 20px;
+  display: block;
+  margin: auto;
+  background-color: #f47983;
+  color: #fff;
+  border: 1px solid #f47983;
+  outline: none;
+  border-radius: 5px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in;
+}
+.contact .btn-form i {
+  color: #fff;
+  transition: color 0.3s ease-in;
+}
+.contact .btn-form:hover {
+  background-color: #fff;
+  color: #f47983;
+}
+.contact .btn-form:hover.btn-form i {
+  color: #f47983;
+}
